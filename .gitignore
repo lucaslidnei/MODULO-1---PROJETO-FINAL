@@ -1,0 +1,6 @@
+# Credenciais e variaveis de ambiente
+_MySQL/.env
+
+# Dados baixados
+_MySQL/data/
+scripts/data/
