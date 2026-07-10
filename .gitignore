@@ -1,6 +1,10 @@
 # Credenciais e variaveis de ambiente
-_MySQL/.env
+.env
+**/.env
 
 # Dados baixados
-_MySQL/data/
-scripts/data/
+dados/
+
+# Python
+__pycache__/
+*.pyc
