@@ -46,48 +46,43 @@ Desta forma foi necessário construir do zero um pipeline que:
 
 #### Fluxo da arquitetura
 
+```
+
 Portal da Transparência (.zip)
-                ￬
-
-┌───────────┐
-│           **RAW** 		│
-│      Texto puro	│
-│      (VARCHAR),  	│
-│      sem regras      │
-└───────────┘
- 		￬
+             ￬
+       ┌────────────┐
+       │     RAW    │
+       │ Texto puro │
+       │ (VARCHAR), │
+       │ sem regras │
+       └────────────┘
+             ￬
 1_extrair.py (download + carga em blocos)
-
-    ￬
-
-┌───────────┐
-│         **SILVER**		│
-│      Tratamento	│
-│         PK/FK,	  	│
-│         CHEK   		│
-└───────────┘
-
-    ￬
-
+             ￬
+       ┌────────────┐
+       │   SILVER   │
+       │ Tratamento │
+       │   PK/FK,   │
+       │   CHECK    │
+       └────────────┘
+             ￬
 2_transformar.py (JOIN + GROUP BY e 1_camada_gold.sql)
-
-    ￬
-
-┌───────────┐
-│         **GOLD**		│
-│      Agregação	│
-│         TABLE, 		│
-│          VIEW           │
-└───────────┘
-
-    ￬
-
+             ￬
+       ┌────────────┐
+       │    GOLD    │
+       │  Agregação │
+       │   TABLE,   │
+       │    VIEW    │
+       └────────────┘
+             ￬
 3_analise.ipynb (análises para responder as perguntas de negócios, tabelas e gráficos)
+```
 
 ---
 
 ## 📂 Estrutura do projeto
 
+```text
 ├── MODULO 1 - PROJETO FINAL
 ├── dados/                  		# zip baixado (ignorado pelo Git)
 ├── reports/                  	# prints do schema e gráficos exportados
@@ -104,6 +99,7 @@ Portal da Transparência (.zip)
 ├── .gitignore                	 # ignora .env, .zip, .csv, dados/
 ├── requirements.txt          	 # dependências do projeto
 └── README.md                 	 # descritivo do projeto
+```
 
 ---
 
